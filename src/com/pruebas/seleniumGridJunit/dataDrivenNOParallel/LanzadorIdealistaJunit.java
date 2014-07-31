@@ -164,7 +164,7 @@ public class LanzadorIdealistaJunit {
 	
 @Test
 	public void ComprarDeactivateHabitacionVacacional() throws InterruptedException, MalformedURLException{
-		ManejadorPrograma manejador = new ManejadorPrograma(driver);
+		ManejadorDrivenNoParallel manejador = new ManejadorDrivenNoParallel(driver);
 		manejador.logicaPrograma();
 }
 	

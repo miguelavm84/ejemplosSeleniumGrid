@@ -23,7 +23,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.junit.Assert.*;
 
-public class ManejadorPrograma {
+public class ManejadorDrivenNoParallel {
 
 	@FindBy (css="div#operation-combo-container > select option:nth-child(1)")
 	private WebElement btnComprar;
@@ -36,7 +36,7 @@ public class ManejadorPrograma {
 	
 	private String url = "http://www.idealista.com";
 	
-	public ManejadorPrograma(RemoteWebDriver driver){
+	public ManejadorDrivenNoParallel(RemoteWebDriver driver){
 		PageFactory.initElements(driver, this);
 		driverUtilizo = driver;
 		driverUtilizo.get(url);

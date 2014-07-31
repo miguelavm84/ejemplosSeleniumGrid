@@ -20,6 +20,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.Assertion;
+import org.testng.asserts.SoftAssert;
 
 import static org.junit.Assert.*;
 
@@ -38,7 +40,7 @@ public class ManejadorPrograma {
 	
 	public ManejadorPrograma(RemoteWebDriver driver){
 		PageFactory.initElements(driver, this);
-		driverUtilizo = driver;
+		this.driverUtilizo = driver;
 		driverUtilizo.get(url);
 	}
 	
@@ -55,10 +57,10 @@ public class ManejadorPrograma {
 		/**
 		 * Ahora vamos a chequear si al haber pulsado comprar  vacacional y habitacion estan deshabilitados como opciones
 		 */
-		assertEquals("Es posible seleccionar vacacional cuando hemos seleccionado comprar como tipo de servicio","trddue", btnVacacional.getAttribute("disabled").toString());
+		assertEquals("Es posible seleccionar vacacional cuando hemos seleccionado comprar como tipo de servicio","true", btnVacacional.getAttribute("disabled").toString());
 		assertEquals("Es posible seleccionar habitacion cuando hemos seleccionado comprar como tipo de servicio","trudde" ,btnHabitacion.getAttribute("disabled").toString());
-
-
+		//softAssert.assertEquals("trudde" ,btnHabitacion.getAttribute("disabled").toString());
+		//softAssert.assertAll();
 	}
 	
 	
