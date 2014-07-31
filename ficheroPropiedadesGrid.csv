@@ -1,0 +1,3 @@
+firefox,31.0,MAC,http://localhost:4444/wd/hub
+safari,,,http://localhost:4444/wd/hub
+chrome,,,http://localhost:4444/wd/hub

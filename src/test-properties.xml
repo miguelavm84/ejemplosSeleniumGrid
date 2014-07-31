@@ -1,0 +1,33 @@
+<suite name="Suite" parallel="tests" verbose="3" thread-count="3">
+  
+  <test name="Lanzador test Idealista TestNG without parallel (firefox)">
+    <parameter name="browser" value="firefox" />
+    <parameter name="platformBrowser" value="MAC" />
+    <parameter name="versionBrowser" value="31.0" />
+    <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
+    <classes>
+      <class name="com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+  
+    <test name="Lanzador test Idealista TestNG without parallel (safari)">
+    <parameter name="browser" value="safari" />
+    <parameter name="platformBrowser" value="MAC" />
+    <parameter name="versionBrowser" value="" />
+    <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
+    <classes>
+      <class name="com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+    
+  <test name="Lanzador test Idealista TestNG without parallel (chrome)">
+    <parameter name="browser" value="chrome" />
+    <parameter name="platformBrowser" value="MAC" />
+    <parameter name="versionBrowser" value="" />
+    <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
+    <classes>
+      <class name="com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

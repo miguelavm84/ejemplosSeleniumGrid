@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="TestNGTest" default="test" basedir=".">
+<!-- Define <testng> task -->
+  <taskdef name="testng" classname="org.testng.TestNGAntTask">
+    <classpath>
+      <pathelement location="lib/testng-6.8.jar"/>
+    </classpath>
+  </taskdef>
+   <property name="testdir" location="test" />
+   <property name="srcdir" location="src" />
+   <property name="libdir" location="lib" />
+   <property name="ng.result" value="test-output"/>
+   <property name="full-compile" value="true" />
+   
+   <path id="classpath.base"/>
+   <path id="classpath.test">
+       <fileset dir="${libdir}">
+         <include name="**/*.jar" />
+      </fileset>
+      <pathelement location="${testdir}" />
+      <pathelement location="${srcdir}" />
+      <path refid="classpath.base" />
+   </path>
+   
+   <target name="clean" >
+        <echo message="making directory..."/>
+		<mkdir dir="${testdir}"/>
+      <delete verbose="${full-compile}">
+         <fileset dir="${testdir}" includes="**/*.class" />
+      </delete>
+   </target>
+   
+   <target name="compile" depends="clean">
+      <javac srcdir="${srcdir}" destdir="${testdir}" 
+         verbose="${full-compile}">
+         <classpath refid="classpath.test"/>
+      </javac>
+   </target>
+   
+   <target name="test" depends="compile">
+	<testng outputdir="${testdir}" classpathref="classpath.test"> 
+      <xmlfileset dir="${srcdir}" includes="test-properties.xml"/> 
+    </testng>
+   </target>
+   
+   <target name="makexsltreports">
+	        <mkdir dir="${basedir}/XSLT_Reports/output"/>
+	        <xslt in="${ng.result}/testng-results.xml" style="src/xslt/testng-results.xsl"
+	              out="${basedir}/XSLT_Reports/output/index.html" classpathref="classpath.test" processor="SaxonLiaison">
+	            <param name="testNgXslt.outputDir" expression="${basedir}/XSLT_Reports/output/"/>
+	            <param name="testNgXslt.showRuntimeTotals" expression="true"/>
+	        </xslt>
+	    </target>
+	    
+</project>
