@@ -28,6 +28,7 @@
       <delete verbose="${full-compile}">
          <fileset dir="${testdir}" includes="**/*.class" />
       </delete>
+      <delete dir="${basedir}/XSLT_Reports/output" failonerror="false"/>
    </target>
    
    <target name="compile" depends="clean">
