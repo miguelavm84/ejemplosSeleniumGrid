@@ -57,8 +57,8 @@ public class ManejadorPrograma {
 		/**
 		 * Ahora vamos a chequear si al haber pulsado comprar  vacacional y habitacion estan deshabilitados como opciones
 		 */
-		assertEquals("Es posible seleccionar vacacional cuando hemos seleccionado comprar como tipo de servicio","true", btnVacacional.getAttribute("disabled").toString());
-		assertEquals("Es posible seleccionar habitacion cuando hemos seleccionado comprar como tipo de servicio","trudde" ,btnHabitacion.getAttribute("disabled").toString());
+		assertEquals("Es posible seleccionar vacacional cuando hemos seleccionado comprar como tipo de servicio","trude", btnVacacional.getAttribute("disabled").toString());
+		assertEquals("Es posible seleccionar habitacion cuando hemos seleccionado comprar como tipo de servicio","true" ,btnHabitacion.getAttribute("disabled").toString());
 		//softAssert.assertEquals("trudde" ,btnHabitacion.getAttribute("disabled").toString());
 		//softAssert.assertAll();
 	}
