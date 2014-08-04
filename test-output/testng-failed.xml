@@ -5,40 +5,6 @@
   <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
   <parameter name="browser" value="chrome"/>
   <parameter name="platformBrowser" value="MAC"/>
-  <test name="Lanzador test Idealista TestNG without parallel (safari)(failed)" parallel="tests">
-    <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
-    <parameter name="versionBrowser" value=""/>
-    <parameter name="browser" value="safari"/>
-    <parameter name="platformBrowser" value="MAC"/>
-    <classes>
-      <class name="com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG">
-        <methods>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="ComprarDeactivateHabitacionVacacional"/>
-          <include name="generoDriver"/>
-        </methods>
-      </class> <!-- com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG -->
-    </classes>
-  </test> <!-- Lanzador test Idealista TestNG without parallel (safari)(failed) -->
-  <test name="Lanzador test Idealista TestNG without parallel (chrome)(failed)" parallel="tests">
-    <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
-    <parameter name="versionBrowser" value=""/>
-    <parameter name="browser" value="chrome"/>
-    <parameter name="platformBrowser" value="MAC"/>
-    <classes>
-      <class name="com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG">
-        <methods>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-          <include name="ComprarDeactivateHabitacionVacacional"/>
-          <include name="generoDriver"/>
-        </methods>
-      </class> <!-- com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG -->
-    </classes>
-  </test> <!-- Lanzador test Idealista TestNG without parallel (chrome)(failed) -->
   <test name="Lanzador test Idealista TestNG without parallel (firefox)(failed)" parallel="tests">
     <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
     <parameter name="versionBrowser" value="31.0"/>
@@ -51,9 +17,43 @@
           <include name="tearDown"/>
           <include name="tearDown"/>
           <include name="ComprarDeactivateHabitacionVacacional"/>
-          <include name="generoDriver"/>
+          <include name="generoDriver" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG -->
     </classes>
   </test> <!-- Lanzador test Idealista TestNG without parallel (firefox)(failed) -->
+  <test name="Lanzador test Idealista TestNG without parallel (chrome)(failed)" parallel="tests">
+    <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
+    <parameter name="versionBrowser" value=""/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="platformBrowser" value="MAC"/>
+    <classes>
+      <class name="com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="ComprarDeactivateHabitacionVacacional"/>
+          <include name="generoDriver" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG -->
+    </classes>
+  </test> <!-- Lanzador test Idealista TestNG without parallel (chrome)(failed) -->
+  <test name="Lanzador test Idealista TestNG without parallel (safari)(failed)" parallel="tests">
+    <parameter name="URL_NODE_HUB" value="http://localhost:4444/wd/hub"/>
+    <parameter name="versionBrowser" value=""/>
+    <parameter name="browser" value="safari"/>
+    <parameter name="platformBrowser" value="MAC"/>
+    <classes>
+      <class name="com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="ComprarDeactivateHabitacionVacacional"/>
+          <include name="generoDriver" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.pruebas.seleniumGridTestNG.dataDrivenParallelXML.LanzadorIdealistaTestNG -->
+    </classes>
+  </test> <!-- Lanzador test Idealista TestNG without parallel (safari)(failed) -->
 </suite> <!-- Failed suite [Suite] -->
